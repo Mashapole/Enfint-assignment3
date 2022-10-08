@@ -1,1 +1,7 @@
-# Enfint-assignment3
+1. Create a console Java program that will accept two parameters in command line – path to the root directory and name of the output file. Program must find all the text files inside chosen directory, read them and then concatenate their contents into a single output text file. To concatenate files you need to know that each file can contain zero, one, or multiple requirements (links to other files). Requirements are strings of format *require ‘<path to file from the root directory>’*, which means that this file depends on required file (path to it is given inside requirement). Using the requirements you should make a list of dependent files, and then concatenate their texts adding needed file content instead of requirements, and then produce output file. 
+
+2. Create tests to check if your program works correctly. In our example right output will be:  
+
+
+
+3. Improve the program. Improved version must not include required files more than once, that means that you need to check list of the dependencies and while concatenating change only first requirement with required text, and remove other requirements for that file. To determine first case of dependency you may sort list by any criteria, for example, by filename. Also, add checking for cyclic dependencies (e.g. when file-1 requires file-2 and in the same time file-2 requires file-1) and throw exception if any cyclic dependency exist.  
